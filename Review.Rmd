@@ -1,0 +1,37 @@
+---
+title: "Review from Group 8"
+output:
+  html_document:
+    df_print: paged
+---
+
+### 1. Your team github URL: 
+
+https://github.com/Zhaosheng-Xie/615-Group8-Mapping-for-hurricane
+
+### 2. The github URL for the project you review: 
+
+https://github.com/jzhan862/615-project-Jinzhe
+
+### 3. Does the code run? 
+
+Yes.
+
+### 4. How many maps are produced? 
+
+Four maps.
+
+### 5. Comparison to Hurricane Exposure maps: 
+
+M1 (10), M2 (10), M3 (10), M4 (10)
+
+### 6. Did your team include any new code in your review?
+ 
+No, but we find somewhere to improve:
+
+At first, in 'ggplot' mapping, the 'geom_polygon' layer with 'county' data can be deleted. Since in its 'geom_sf' layer already contains the plot of counties of rainfall of hurricanes.
+
+Second, also in 'ggplot' mapping, the 'geom_polygon' layer with 'state' data can also be replaced by another 'geom_sf' with new data from 'map' function (map('state',plot=F,fill=T)). The benefit of this replacement is the 'usmap' package will not be required anymore and the single 'maps' package is enough.
+
+Third, for 'tmap' mapping, we believe additional 'tm_polygon' layer with 'state' data should be included to denote the lines between states.
+ 
